@@ -2,34 +2,39 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Fixcomputer" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Fixcomputer" %>">
+    <%= display_meta_tags default_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <div class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
+    <header id="header" class="clearfix">
+      <div>
+        <div class="wrapper">
+          <div id="nav-bar">
+            <%= render "layouts/navigation" %>
+          </div>
+          <div id="logo">
+            <a href="/">
+              <img alt="云梯VPNCloud.me logo" src="//oss.aliyuncs.com/vpncloud-a/assets/logo-cb8b0542db89d450f8f3aaaf597173c9.png" title="云梯VPNCloud.me">
+            </a>
+          </div>
         </div>
-      </nav>
-    </div>
-    <div id="main" role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
+      </div>
+    </header>
+    <div id="page">
+      <div id="content">
+        <div class="wrapper">
               <%= render 'layouts/messages' %>
               <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
         </div>
-      </div> <!--! end of .container -->
+        <footer>
+        </footer>
+      </div>
     </div> <!--! end of #main -->
+    <footer id="footer">
+      <%= render "layouts/footer" %>
+    </footer>
   </body>
 </html>

@@ -1,1 +1,15 @@
-<%= link_to "Fixcomputer", root_path, :class => 'brand' %>
+<div id="main-menu">
+  <ul>
+    <li class="active">
+      <%= link_to t('controller.home'), root_path %>
+    </li>
+    <li>
+      <%= link_to t('action.problems.new'), new_problem_path %>
+    </li>
+    <li id="order">
+      <%= link_to pricing_path,class: 'button-bright-yellow' do %>
+        <%= content_tag 'span', t('action.pricing') -%>
+      <% end -%>
+    </li>
+  </ul>
+</div>

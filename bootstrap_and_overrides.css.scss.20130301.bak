@@ -43,7 +43,7 @@ h6{
   padding-bottom:7px;
   line-height:16px
 }
-/*@import "bootstrap-responsive";*/
+@import "bootstrap-responsive";
 body {
   font-family: "Helvetica Neue",Helvetica,"Heiti SC","Segoe UI","Microsoft YaHei",Arial,sans-serif;
   font-size: 13px;
@@ -62,5 +62,4 @@ html, body {
   zoom: 1;
   clear: both;
 }
-.row{
-margin-left:0}
+
