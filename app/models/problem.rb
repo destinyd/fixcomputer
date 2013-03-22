@@ -16,6 +16,9 @@ class Problem
 
   field :plus, type: String,default: ""
   field :price, type: Float
+
+  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:uuid,:plus
+
   validates_presence_of :phone
   validates_presence_of :name
   validates_presence_of :address
