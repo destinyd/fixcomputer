@@ -16,3 +16,4 @@ Price.create name: "简单硬件调试",price: 10
 Price.create name: "病毒查杀",price: 0, plus: "10~20，视病毒类型而定"
 Price.create name: "常用软件安装",price: 10
 Price.create name: "硬件维修",price: 0,plus: "因有较大差异，价格面议"
+Price.create name: "局域网搭建、调试",price: 0,plus: "视台数、具体环境定"
