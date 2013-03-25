@@ -17,7 +17,8 @@ class Problem
   field :plus, type: String,default: ""
   field :price, type: Float
 
-  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:uuid,:plus
+  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid
+  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid,:plus,:price, as: :admin
 
   validates_presence_of :phone
   validates_presence_of :name
@@ -25,4 +26,17 @@ class Problem
 
   scope :recent,order_by(:created_at => :desc)
   scope :by_uuid,lambda{|uuid| where(uuid: uuid).recent}
+
+  def as_json(options)
+    if options[:type] == :api_show
+      options[:include] = [:status_recodings]
+      super(options)
+    else
+      super(options)
+    end
+  end
+
+  after_update do
+    self.status_recodings.create status: self.status
+  end
 end

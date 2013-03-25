@@ -4,5 +4,7 @@ Fixcomputer::Application.routes.draw do
   #resources :problems
   post '/android', :to => "problems#create"
   get '/android', :to => "problems#uuid"
+  get '/android/:id', :to => "problems#uuid_show"
+  post '/android/:id', :to => "problems#uuid_update"
   get '/pricing', :to => "prices#index"
 end
