@@ -29,4 +29,13 @@ skip_before_filter :verify_authenticity_token, :only => [:uuid,:uuid_show,:uuid_
       render :json=> @problem.errors, :status=>422
     end
   end
+
+  def uuid_status
+    @problem = Problem.uuid_status(params[:uuid]).first
+    render json: {
+      last_changed_at: @problem.try(:updated_at),
+      last: @problem,
+    }.to_json
+  end
+
 end

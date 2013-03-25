@@ -25,7 +25,9 @@ class Problem
   validates_presence_of :address
 
   scope :recent,order_by(:created_at => :desc)
+  scope :nearly_modify,order_by(:updated_at => :desc)
   scope :by_uuid,lambda{|uuid| where(uuid: uuid).recent}
+  scope :uuid_status,lambda{|uuid| where(uuid: uuid).nearly_modify}
 
   def as_json(options)
     if options[:type] == :api_show
