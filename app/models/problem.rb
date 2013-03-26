@@ -29,7 +29,7 @@ class Problem
   scope :by_uuid,lambda{|uuid| where(uuid: uuid).recent}
   scope :uuid_status,lambda{|uuid| where(uuid: uuid).nearly_modify}
 
-  def as_json(options)
+  def as_json(options={})
     if options[:type] == :api_show
       options[:include] = [:status_recodings]
       super(options)

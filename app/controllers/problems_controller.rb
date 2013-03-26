@@ -11,7 +11,7 @@ skip_before_filter :verify_authenticity_token, :only => [:uuid,:uuid_show,:uuid_
   end
 
   def uuid
-    @problems = Problem.by_uuid params[:uuid]
+    @problems = Problem.by_uuid(params[:uuid]).page params[:page]
     render json: @problems.to_json
   end
 
@@ -21,7 +21,6 @@ skip_before_filter :verify_authenticity_token, :only => [:uuid,:uuid_show,:uuid_
   end
 
   def uuid_update
-    p params.inspect
     @problem = Problem.by_uuid(params[:uuid]).find(params[:id])
     if @problem.update_attributes params[:problem]
       render :json => @problem.as_json(type: :api_show), :status => :ok
