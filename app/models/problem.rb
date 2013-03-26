@@ -12,13 +12,14 @@ class Problem
   field :uuid, type: String,default: ""
 
   symbolize :status,in: [:order,:contacted,:visited,:token,:repaired,:paid,:finish,:cancel],default: :order
+  attr_accessor :status_plus
   has_many :status_recodings
 
   field :plus, type: String,default: ""
   field :price, type: Float
 
-  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid
-  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid,:plus,:price, as: :admin
+  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid,:plus,:price,:status_plus
+  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid, as: :user
 
   validates_presence_of :phone
   validates_presence_of :name
@@ -38,7 +39,11 @@ class Problem
     end
   end
 
+  before_update do
+    self.price = self.status_plus.to_f if self.status == :paid and !self.status_plus.blank?
+  end
+
   after_update do
-    self.status_recodings.create status: self.status
+    self.status_recodings.create status: self.status,plus: self.status_plus
   end
 end
