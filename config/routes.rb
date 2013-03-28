@@ -1,5 +1,5 @@
 Fixcomputer::Application.routes.draw do
-  #root :to => "home#index"
+  root :to => "home#index"
   #get '/pricing', :to => "home#pricing",as: :pricing
   scope '/xiaofengxiaomi' do
     resources :problems do

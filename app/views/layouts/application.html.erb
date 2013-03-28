@@ -3,38 +3,22 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= display_meta_tags default_meta_tags %>
-    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "layout", :media => "all" %>
+    <%= stylesheet_link_tag "dblue", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <%#= javascript_include_tag "jquery.form" %>
+    <%#= javascript_include_tag "jquery.tweet" %>
+    <%#= javascript_include_tag "easing" %>
+    <%#= javascript_include_tag "jquery.prettyPhoto" %>
+    <%#= javascript_include_tag "jquery.scrollTo-1.4.2-min" %>
+    <%#= javascript_include_tag "jquery.localscroll-1.2.7-min" %>
+    <%#= javascript_include_tag "jquery.tools.min" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
+    <!-- handles the jquery cycle slider -->
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <header id="header" class="clearfix">
-      <div>
-        <div class="wrapper">
-          <div id="nav-bar">
-            <%= render "layouts/navigation" %>
-          </div>
-          <div id="logo">
-            <a href="/">
-              <img alt="云梯VPNCloud.me logo" src="//oss.aliyuncs.com/vpncloud-a/assets/logo-cb8b0542db89d450f8f3aaaf597173c9.png" title="云梯VPNCloud.me">
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div id="page">
-      <div id="content">
-        <div class="wrapper">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-        </div>
-        <footer>
-        </footer>
-      </div>
-    </div> <!--! end of #main -->
-    <footer id="footer">
-      <%= render "layouts/footer" %>
-    </footer>
+    <%= render 'layouts/messages' %>
+    <%= yield %>
   </body>
 </html>

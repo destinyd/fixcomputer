@@ -12,5 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
-//= require_tree .
+//= require jquery.scrollTo.min
+//= require jquery.localScroll.min
+
+$(document).ready(function() {
+  //NAVIGATION
+
+  $('#navigation').localScroll();
+  $('#navigation li a').click( function () {
+    $('#navigation li a').removeClass("active");
+    $(this).addClass("active");
+  });
+
+  $('#logo h1 a').click(function(){ 		
+    $('#navigation li a').removeClass("active");
+    $('#navigation li:first a').addClass("active");
+    $('html, body').animate({scrollTop: 0});
+
+  });
+
+});	//END of jQuery

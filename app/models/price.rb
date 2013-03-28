@@ -10,4 +10,7 @@ class Price
   attr_accessible :name,:price,:plus
 
   scope :index,order_by(created_at: :asc)
+  def human_price
+    price == 0.0 ? '面议' : price
+  end
 end
