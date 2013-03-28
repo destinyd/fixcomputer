@@ -78,3 +78,6 @@ pickle-email-*.html
 
 config/mongoid.yml
 public/assets/
+
+bak/
+public/*.apk
