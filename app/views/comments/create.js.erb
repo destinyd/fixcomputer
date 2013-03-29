@@ -1,0 +1,7 @@
+<% @success = @comment.valid? %>
+<% @comment = Comment.new  if @success  %>
+$('#new_comment').html('<%= j render 'comments/form' %>');
+loading.dialog('destroy');
+<% if @success %>
+  $('<div>提交留言成功</div>').dialog({title: '提示'});
+<% end -%>

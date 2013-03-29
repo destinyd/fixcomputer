@@ -1,0 +1,8 @@
+<% @success = @problem.valid? %>
+<% @problem = Problem.new  if @success  %>
+$('#new_problem').html('<%= j render 'problems/form' %>');
+loading.dialog('destroy');
+<% if @success %>
+  $('<div>提交故障成功</div>').dialog({title: '提示'});
+<% end -%>
+

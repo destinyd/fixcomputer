@@ -8,6 +8,16 @@
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
     <!-- handles the jquery cycle slider -->
+    <script>
+      var loading;
+      $(document).ready(function() {
+        $('form').submit(
+          function(){
+            loading = $('<div class="loading"><%= j image_tag "loading.gif",alt:"loading",title:"loading" %></div>').dialog({modal: true,title: '信息提交中，请稍等'});
+          }
+        )
+    });
+    </script>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
     <%#= render 'layouts/messages' %>

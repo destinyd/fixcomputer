@@ -1,6 +1,8 @@
 class ProblemsController < InheritedResources::Base
-skip_before_filter :verify_authenticity_token, :only => [:uuid,:uuid_show,:uuid_update]
+  skip_before_filter :verify_authenticity_token, :only => [:uuid,:uuid_show,:uuid_update]
   respond_to :json
+  respond_to :js, :only => :create
+  actions :all,except: [:index,:show,:edit,:update,:new,:destroy]
   def uuid
     @problems = Problem.by_uuid(params[:uuid]).page params[:page]
     render json: @problems.to_json

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.dialog
 //= require jquery.scrollTo.min
 //= require jquery.localScroll.min
 
@@ -30,5 +31,4 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop: 0});
 
   });
-
 });	//END of jQuery

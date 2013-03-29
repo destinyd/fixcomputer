@@ -26,3 +26,4 @@ gem 'meta-tags', :require => 'meta_tags',git: 'git://github.com/destinyd/meta-ta
 gem 'less-rails'
 gem 'less-rails-bootstrap'
 gem "symbolize", :require => "symbolize/mongoid"
+gem 'jquery-ui-rails'

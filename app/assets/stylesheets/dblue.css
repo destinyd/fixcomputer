@@ -1094,3 +1094,11 @@ label {
 .downloader p{
   font-size: 14px;
 }
+
+.loading{
+  text-align: center;
+}
+.loading img{
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
