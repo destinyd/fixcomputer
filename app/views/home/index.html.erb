@@ -1,10 +1,10 @@
 <div id="left" class="plates">
   <ul id="navigation">
     <li><a class="active" href="#柳州电脑维修">关于我们</a></li>
-    <li><a href="#problem_form">故障提交</a></li>
-    <li><a href="#pricing">价格列表</a></li>
-    <li><a href="#download">应用下载</a></li>
-    <li><a href="#contact">留言</a></li>
+    <li><a href="#故障提交">故障提交</a></li>
+    <li><a href="#价格列表">价格列表</a></li>
+    <li><a href="#应用下载">应用下载</a></li>
+    <li><a href="#联系方式">联系方式</a></li>
   </ul>
 
   <div id="logo">
@@ -16,7 +16,7 @@
 
 <div id="right" class="square-grid">
 
-  <div id="home" class="page">
+  <div id="柳州电脑维修" class="page">
     <h2>欢迎来到 柳州电脑维修 网站</h2>
     <p class="sub-title">关于我们</p>
 
@@ -31,41 +31,33 @@
   <!-- PROBLEM PAGE -->	
 
 
-  <div id="problem_form" class="page">
+  <div id="故障提交" class="page">
     <h2>故障提交</h2>
     <p class="sub-title">请认真提交故障信息，我们会第一时间联系您！</p>
 
     <div class="full-width">
       <% @problem = Problem.new %>
       <%= render "problems/form" %>
-      <%#<form id="contact_form" method="post" action="submitemail.php">						%>
-        <%#<label for="name">Name:</label><input  class="textbox" type="text" name="name" id="name" />%>
-        <%#<label for="email">E-mail:</label><input  class="textbox" type="text" name="email" id="email" />%>
-        <%#<label for="subject">Subject:</label><input  class="textbox" type="text" name="subject" id="subject" />%>
-        <%#<label for="message">Message:</label><textarea class="textbox" name="message" id="message" rows="" cols=""></textarea>%>
-        <%#<input type="submit" name="submit" value="Send Message" id="submit" /> <br />%>
-        <%#<p id="message-outcome"></p>%>
-      <%#</form>%>
     </div>
 
     <div class="clear"></div>
   </div><!-- end problem page -->
 
-  <!-- pricing PAGE -->
+  <!-- 价格列表 PAGE -->
 
 
-  <div id="pricing" class="page">
+  <div id="价格列表" class="page">
     <h2>今日价格列表</h2>	
     <p class="sub-title">当天修理价格，让您明明白白消费</p>
     <div class="full-width">
       <%= render "prices/prices" %>
     </div>
 
-  </div><!-- end pricing page -->					
+  </div><!-- end 价格列表 page -->					
   <!-- DOWNLOAD PAGE -->
 
 
-  <div id="download" class="page">
+  <div id="应用下载" class="page">
     <h2>应用下载</h2>	
     <p class="sub-title">安卓版下载，防止您电脑瘫痪时手足无措</p>
     <div class="downloader full-width">
@@ -80,15 +72,15 @@
 
     </div>
 
-  </div><!-- end pricing page -->					
+  </div><!-- end download page -->					
 
 
   <!-- CONTACT PAGE -->	
 
 
-  <div id="contact" class="page">
+  <div id="联系方式" class="page">
     <h2>联系方式</h2>
-    <p class="sub-title"></p>
+    <p class="sub-title">您可以通过以下方式找到我们。</p>
 
     <div class="two-third">
       <h3>请留言给我们</h3>
