@@ -1,6 +1,6 @@
 <div id="left" class="plates">
   <ul id="navigation">
-    <li><a class="active" href="#home">首页</a></li>
+    <li><a class="active" href="#柳州电脑维修">关于我们</a></li>
     <li><a href="#problem_form">故障提交</a></li>
     <li><a href="#pricing">价格列表</a></li>
     <li><a href="#download">应用下载</a></li>
@@ -8,19 +8,20 @@
   </ul>
 
   <div id="logo">
-    <h1><a href="#home">柳州电脑维修网站</a></h1>
+    <h1><a href="#柳州电脑维修">柳州电脑维修</a></h1>
   </div>
-  <p id="copyright">©2013 <a href="http://wx.realityandapp.com">柳州电脑维修网站</a></p>
+  <p id="copyright">©2013 <a href="http://wx.realityandapp.com">柳州电脑维修</a></p>
 
 </div><!-- end left -->	
 
 <div id="right" class="square-grid">
 
   <div id="home" class="page">
-    <h2>欢迎来到 柳州电脑维修网站</h2>
+    <h2>欢迎来到 柳州电脑维修 网站</h2>
     <p class="sub-title">关于我们</p>
 
-    <p class="slogan">我们团队致力于在柳州市内提供一流的电脑维修服务。现推出网上故障提交系统、安卓平台故障提交应用，使您在电脑出现故障时，能尽快联系到我们，我们会第一时间派工作人员上门帮您排除故障。</p>
+    <p class="slogan">我们团队致力于在柳州市内提供一流的电脑维修服务。</p>
+    <p class="slogan">现推出网上故障提交系统、安卓平台故障提交应用，使您在电脑出现故障时，能尽快联系到我们，我们会第一时间派工作人员上门帮您排除故障。</p>
 
     <div class="clear"></div>
 
@@ -35,14 +36,16 @@
     <p class="sub-title">请认真提交故障信息，我们会第一时间联系您！</p>
 
     <div class="full-width">
-      <form id="contact_form" method="post" action="submitemail.php">						
-        <label for="name">Name:</label><input  class="textbox" type="text" name="name" id="name" />
-        <label for="email">E-mail:</label><input  class="textbox" type="text" name="email" id="email" />
-        <label for="subject">Subject:</label><input  class="textbox" type="text" name="subject" id="subject" />
-        <label for="message">Message:</label><textarea class="textbox" name="message" id="message" rows="" cols=""></textarea>
-        <input type="submit" name="submit" value="Send Message" id="submit" /> <br />
-        <p id="message-outcome"></p>
-      </form>
+      <% @problem = Problem.new %>
+      <%= render "problems/form" %>
+      <%#<form id="contact_form" method="post" action="submitemail.php">						%>
+        <%#<label for="name">Name:</label><input  class="textbox" type="text" name="name" id="name" />%>
+        <%#<label for="email">E-mail:</label><input  class="textbox" type="text" name="email" id="email" />%>
+        <%#<label for="subject">Subject:</label><input  class="textbox" type="text" name="subject" id="subject" />%>
+        <%#<label for="message">Message:</label><textarea class="textbox" name="message" id="message" rows="" cols=""></textarea>%>
+        <%#<input type="submit" name="submit" value="Send Message" id="submit" /> <br />%>
+        <%#<p id="message-outcome"></p>%>
+      <%#</form>%>
     </div>
 
     <div class="clear"></div>
@@ -117,8 +120,8 @@
         Website: <a href="#">www.loremipsum.com</a> <br />
       </p>
 
-      <div class="social-networks">
         <!--
+      <div class="social-networks">
         <h3>Around the internet</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>	
         <ul class="social-links">
@@ -133,8 +136,8 @@
           <li class="forrst"><a href="#">Forrst</a></li>
           <li class="reddit"><a href="#">Reddit</a></li>														
         </ul>
-        --!>
-      </div><!-- end social-networks -->
+      </div>
+        --!><!-- end social-networks -->
     </div>
 
     <div class="clear"></div>

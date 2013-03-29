@@ -1,29 +1,6 @@
 class ProblemsController < InheritedResources::Base
 skip_before_filter :verify_authenticity_token, :only => [:uuid,:uuid_show,:uuid_update]
   respond_to :json
-  def show
-    @problem = Problem.find(params[:id])
-    render :json => @problem.as_json(type: :api_show), :status => :ok
-  end
-
-  def update
-    @problem = Problem.find(params[:id])
-    if @problem.update_attributes params[:problem]
-      render :json => @problem.as_json(type: :api_show), :status => :ok
-    else
-      render :json=> @problem.errors, :status=>422
-    end
-  end
-
-  def create
-    @problem = Problem.new(params[:problem])
-    if @problem.save
-      render :json => @problem.to_json, :status => :ok
-    else
-      render :json=> @problem.errors, :status=>422
-    end
-  end
-
   def uuid
     @problems = Problem.by_uuid(params[:uuid]).page params[:page]
     render json: @problems.to_json

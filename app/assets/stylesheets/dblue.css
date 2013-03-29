@@ -190,7 +190,7 @@ ol li {
 #left {
   width: 33%;
   position: fixed;
-  min-height: 300px;
+  min-height: 400px;
   min-width: 330px;
 }
 
@@ -526,10 +526,11 @@ ul#navigation li a.active {
 
 .slogan {
   font-family: Bebas, Arial, sans-serif;
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 16px;
+  line-height: 30px;
   color: #616161;
-  margin: 30px 0 15px 0;
+  margin: 15px 0 8px 0;
+  text-indent:2em;
 }
 
 .slogan a:hover {
@@ -1007,9 +1008,9 @@ ul.portfolio-thumbs li .zoom-btn:hover, ul.portfolio-thumbs li .play-btn:hover {
   border: 1px solid #d1d1d1;	
 }
 
-form {			
-  width: 400px;
-}
+/*form {			*/
+  /*width: 400px;*/
+/*}*/
 
 .textbox {
   color: #747474;
@@ -1024,14 +1025,18 @@ form {
 
 label {
   padding-top: 6px;
+  padding-right: 12px;
   float: left;
-  width: 70px;
+  width: 100px;
   overflow:hidden;
+  text-align: right;
 }
 
-#message, #comment {
+#message, #comment, .full-input {
   height: 135px;
-  width: 316px;
+}
+#message, #comment, .full-input{
+  width: 450px;
 }
 
 #submit, #post-comment {	
@@ -1086,48 +1091,6 @@ label {
   overflow: hidden;
 }
 
-
-/*=== SOCIAL LINKS
-==================================================*/
-
-.facebook a { background: url('img/facebook.png') no-repeat top center;	}	
-.facebook a:hover {	background: url('img/facebook.png') no-repeat bottom center; }	
-.blogger a { background: url('img/blogger.png') no-repeat top center; }	
-.blogger a:hover { background: url('img/blogger.png') no-repeat bottom center; }	
-.delicious a { background: url('img/delicious.png') no-repeat top center; }	
-.delicious a:hover { background: url('img/delicious.png') no-repeat bottom center; }	
-.deviant a { background: url('img/deviant.png') no-repeat top center; }	
-.deviant a:hover { background: url('img/deviant.png') no-repeat bottom center; }	
-.digg a { background: url('img/digg.png') no-repeat top center; }	
-.digg a:hover { background: url('img/digg.png') no-repeat bottom center; }	
-.flickr a { background: url('img/flickr.png') no-repeat top center; }	
-.flickr a:hover { background: url('img/flickr.png') no-repeat bottom center; }	
-.forrst a { background: url('img/forrst.png') no-repeat top center;}	
-.forrst a:hover { background: url('img/forrst.png') no-repeat bottom center; }	
-.lastfm a {	background: url('img/lastfm.png') no-repeat top center;	}	
-.lastfm a:hover { background: url('img/lastfm.png') no-repeat bottom center; }
-.linkedin a { background: url('img/linkedin.png') no-repeat top center; }	
-.linkedin a:hover { background: url('img/linkedin.png') no-repeat bottom center; }
-.myspace a { background: url('img/myspace.png') no-repeat top center; }	
-.myspace a:hover { background: url('img/myspace.png') no-repeat bottom center; }
-.reddit a { background: url('img/reddit.png') no-repeat top center; }	
-.reddit a:hover { background: url('img/reddit.png') no-repeat bottom center; }
-.rss a { background: url('img/rss.png') no-repeat top center; }	
-.rss a:hover { background: url('img/rss.png') no-repeat bottom center; }
-.share a { background: url('img/share.png') no-repeat top center; }	
-.share a:hover { background: url('img/share.png') no-repeat bottom center; }
-.skype a { background: url('img/skype.png') no-repeat top center; }	
-.skype a:hover { background: url('img/skype.png') no-repeat bottom center; }
-.stumble a { background: url('img/stumble.png') no-repeat top center; }	
-.stumble a:hover { background: url('img/stumble.png') no-repeat bottom center; }
-.technocrati a { background: url('img/technocrati.png') no-repeat top center; }	
-.technocrati a:hover { background: url('img/technocrati.png') no-repeat bottom center; }
-.tumblr a { background: url('img/tumblr.png') no-repeat top center; }	
-.tumblr a:hover { background: url('img/tumblr.png') no-repeat bottom center; }
-.twitter a { background: url('img/twitter.png') no-repeat top center; }	
-.twitter a:hover { background: url('img/twitter.png') no-repeat bottom center; }
-.vimeo a { background: url('img/vimeo.png') no-repeat top center; }	
-.vimeo a:hover { background: url('img/vimeo.png') no-repeat bottom center; }
-.yahoo a { background: url('img/yahoo.png') no-repeat top center; }	
-.yahoo a:hover { background: url('img/yahoo.png') no-repeat bottom center; }
-
+.downloader p{
+  font-size: 14px;
+}

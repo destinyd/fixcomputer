@@ -1,15 +1,17 @@
-<%= simple_form_for(@problem) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :phone %>
-    <%= f.input :name %>
-    <%= f.input :desc %>
-    <%= f.input :address %>
-    <%= f.input :address_plus %>
+<%= simple_form_for(@problem,remote: true) do |f| %>
+  <div class="form-errors">
+    <%= f.error_notification %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-inputs">
+    <%= f.input :phone,input_html: {class:'full-input'} %>
+    <%= f.input :name,input_html: {class:'full-input'} %>
+    <%= f.input :address,input_html: {class:'full-input'} %>
+    <%= f.input :address_plus,input_html: {class:'full-input'} %>
+    <%= f.input :desc, as: :text,input_html: { rows: 8,class: 'full-input'} %>
+  </div>
+
+  <div style="padding-left:112px;">
+    <%= f.button :submit,class: 'btn btn-primary' %>
   </div>
 <% end %>
