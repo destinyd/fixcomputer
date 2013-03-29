@@ -15,6 +15,7 @@
 //= require jquery.ui.dialog
 //= require jquery.scrollTo.min
 //= require jquery.localScroll.min
+//= require jquery.ui.totop.min
 
 $(document).ready(function() {
   //NAVIGATION
@@ -31,4 +32,6 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop: 0});
 
   });
+
+  $('#right').UItoTop()
 });	//END of jQuery
