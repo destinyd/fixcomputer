@@ -87,37 +87,21 @@
 
 
   <div id="contact" class="page">
-    <h2>留言</h2>
-    <p class="sub-title">您的建议是我们进步的动力！</p>
+    <h2>联系方式</h2>
+    <p class="sub-title"></p>
 
     <div class="two-third">
       <h3>请留言给我们</h3>
-      <p>如果您觉得我们的工作有什么不到位,或者是您需要与我们合作,请留言给我们,我们会在第一时间回复.</p>
-
-      <form id="contact_form" method="post" action="submitemail.php">						
-        <label for="name">Name:</label><input  class="textbox" type="text" name="name" id="name" />
-        <label for="email">E-mail:</label><input  class="textbox" type="text" name="email" id="email" />
-        <label for="subject">Subject:</label><input  class="textbox" type="text" name="subject" id="subject" />
-        <label for="message">Message:</label><textarea class="textbox" name="message" id="message" rows="" cols=""></textarea>
-        <input type="submit" name="submit" value="Send Message" id="submit" /> <br />
-        <p id="message-outcome"></p>
-      </form>
-
+      <p>如果您觉得我们的工作有什么不到位，或者是您需要与我们合作，请留言给我们，我们会在第一时间回复。您的建议是我们进步的动力！</p>
+      <% @comment = Comment.new %>
+      <%= render "comments/form" %>
     </div>
 
     <div class="one-third last">				
-      <h3>Contact info</h3>
+      <h3>联系方式</h3>
       <p>
-        Name of the street 123/4 <br />
-        Name of the City <br />
-        Name of the Country <br />
-      </p>
-
-      <p>
-        Phone: +321 123 456 7 <br />
-        Fax: +321 123 456 7 <br />
-        E-mail: <a href="#">johndoe@ipsum.com</a> <br />
-        Website: <a href="#">www.loremipsum.com</a> <br />
+        E-mail: lzfixcomputer<img src="/images/at.gif" alt="@" title="@" />163.com <br />
+        网址: <%= link_to root_url,root_path %> <br />
       </p>
 
         <!--

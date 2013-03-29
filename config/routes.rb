@@ -1,7 +1,8 @@
 Fixcomputer::Application.routes.draw do
   root :to => "home#index"
   #get '/pricing', :to => "home#pricing",as: :pricing
-  resources :problems
+  resources :comments,except: [:index,:show,:edit,:update,:new,:destroy]
+  resources :problems,except: [:index,:show,:edit,:update,:new,:destroy]
   scope module: 'admin',path: '/xiaofengxiaomi' do
     resources :problems do
       get :status,on: :collection

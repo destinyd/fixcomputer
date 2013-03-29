@@ -204,6 +204,7 @@ zh-CN:
     name: '名称'
     email: '邮箱'
     address:  地址
+    message: 内容
 
 
   labels:
