@@ -11,7 +11,7 @@ gem "mongoid", ">= 3.1.1"
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "database_cleaner", ">= 0.9.1", :group => :test
 gem "mongoid-rspec", ">= 1.6.0", :group => :test
-gem "email_spec", ">= 1.4.0", :group => :test
+#gem "email_spec", ">= 1.4.0", :group => :test
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "simple_form", ">= 2.0.4"
 gem "quiet_assets", ">= 1.0.1", :group => :development
@@ -23,7 +23,7 @@ gem "therubyracer", ">= 0.11.3", :group => :assets, :platform => :ruby, :require
 gem "inherited_resources"
 gem 'kaminari'
 gem 'meta-tags', :require => 'meta_tags',git: 'git://github.com/destinyd/meta-tags.git'
-gem 'less-rails'
-gem 'less-rails-bootstrap'
+#gem 'less-rails'
+#gem 'less-rails-bootstrap'
 gem "symbolize", :require => "symbolize/mongoid"
 gem 'jquery-ui-rails'
