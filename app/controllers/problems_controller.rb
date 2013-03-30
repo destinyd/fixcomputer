@@ -3,6 +3,16 @@ class ProblemsController < InheritedResources::Base
   respond_to :json
   respond_to :js, :only => :create
   actions :all,except: [:index,:show,:edit,:update,:new,:destroy]
+
+  def create
+    @problem = Problem.new(params[:problem].merge(from: 'android'), as: :user)
+    if @problem.save
+      render :json => @problem.to_json, :status => :ok
+    else
+      render :json=> @problem.errors, :status=>422
+    end
+  end
+
   def uuid
     @problems = Problem.by_uuid(params[:uuid]).page params[:page]
     render json: @problems.to_json

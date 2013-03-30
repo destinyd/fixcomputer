@@ -17,9 +17,10 @@ class Problem
 
   field :plus, type: String,default: ""
   field :price, type: Float
+  field :from, type: String,default: "website"
 
-  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid,:plus,:price,:status_plus
-  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid, as: :user
+  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid,:plus,:price,:status_plus,:from
+  attr_accessible :phone, :name,:address,:address_plus,:desc, :lat, :lng,:status,:uuid,:from, as: :user
 
   validates_presence_of :phone
   validates_presence_of :name
