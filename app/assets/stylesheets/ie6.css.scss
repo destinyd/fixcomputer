@@ -1,0 +1,33 @@
+#notice_ie6{
+  background-color: #FF8700;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
+#left {
+  position:relative;
+  width: 33%;
+  float: left;
+  height: 2319px;
+}
+
+#right {
+  width: 67%;
+  background-color: #f7f7f7;
+  float: right;
+}
+
+input.full-input{
+  height: 20px;
+}
+
+/*#logo {*/
+  /*padding: 35px 0 0 45px;*/
+  /*position: absolute;*/
+  /*bottom: 20px;*/
+  /*right: 5px;*/
+  /*width: 255px;*/
+  /*[>background: url('img/logo.png') no-repeat center left;<]*/
+  /*margin-bottom: 10px;*/
+/*}*/
